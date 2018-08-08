@@ -1,9 +1,7 @@
 pipeline {
   agent none
-
-  
    environment {
-    CI = 'true'
+    CI = 'false'
   }
   stages {
     stage('Build') {
