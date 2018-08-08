@@ -12,7 +12,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'echo "sureshbabu jagatha"'
+        sh 'echo "sureshbabu jagat sffsfha"'
       }
     }
     stage('Test') {
