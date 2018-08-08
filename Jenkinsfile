@@ -6,6 +6,9 @@ pipeline {
     }
 
   }
+   environment {
+    CI = 'true'
+  }
   stages {
     stage('Build') {
       steps {
@@ -17,8 +20,5 @@ pipeline {
         sh './jenkins/scripts/test.sh'
       }
     }
-  }
-  environment {
-    CI = 'true'
   }
 }
