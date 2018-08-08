@@ -1,11 +1,5 @@
 pipeline {
-  agent {
-    docker {
-      image 'node:6-alpine'
-      args '-p 3000:3000'
-    }
-
-  }
+  agent none
   stages {
     stage('Build') {
       steps {
@@ -17,5 +11,8 @@ pipeline {
         sh './jenkins/scripts/test.sh'
       }
     }
+  }
+  environment {
+    CI = 'true'
   }
 }
